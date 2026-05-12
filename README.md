@@ -218,6 +218,22 @@ If you want to enable Microsoft Teams, provide the channel webhook.
 | `alert.teams.title`              | Customized title in Microsoft teams message     |
 | `alert.teams.text`               | Customized title in Microsoft teams message     |
 
+#### Teams Workflow
+
+<p>
+  <img src="./assets/teams.png" width="50%"/>
+</p>
+
+Similar to Microsoft Teams but uses the modern Workflow webhook with Adaptive Cards for richer formatting.
+
+| Parameter                              | Description                                     |
+|:---------------------------------------|:------------------------------------------------|
+| `alert.teams_workflow.webhook`         | Workflow webhook URL                            |
+| `alert.teams_workflow.title`           | Customized title in message                     |
+| `alert.teams_workflow.text`            | Customized text in message                      |
+| `alert.teams_workflow.maxRetries`      | Max retry attempts (default: 3)                 |
+| `alert.teams_workflow.retryDelay`      | Retry delay in seconds (default: 5)             |
+
 #### Rocket Chat
 
 <p>

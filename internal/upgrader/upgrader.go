@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/abahmed/kwatch/internal/alert"
-	"github.com/abahmed/kwatch/internal/config"
-	"github.com/abahmed/kwatch/internal/constant"
-	"github.com/abahmed/kwatch/internal/state"
-	"github.com/abahmed/kwatch/internal/version"
+	"github.com/pontostroy/kwatch/internal/alert"
+	"github.com/pontostroy/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/constant"
+	"github.com/pontostroy/kwatch/internal/state"
+	"github.com/pontostroy/kwatch/internal/version"
 	"github.com/google/go-github/v41/github"
 	"k8s.io/klog/v2"
 )
@@ -87,7 +87,7 @@ func (u *Upgrader) checkRelease() {
 
 	r, _, err := u.githubClient.GetLatestRelease(
 		ctx,
-		"abahmed",
+		"pontostroy",
 		"kwatch")
 	if err != nil {
 		klog.InfoS("failed to get latest release", "error", err.Error())

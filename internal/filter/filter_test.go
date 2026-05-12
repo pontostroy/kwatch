@@ -4,9 +4,9 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/abahmed/kwatch/internal/config"
-	"github.com/abahmed/kwatch/internal/storage"
-	"github.com/abahmed/kwatch/internal/storage/memory"
+	"github.com/pontostroy/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/storage"
+	"github.com/pontostroy/kwatch/internal/storage/memory"
 	"github.com/stretchr/testify/assert"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

@@ -3,10 +3,10 @@ package handler
 import (
 	"time"
 
-	"github.com/abahmed/kwatch/internal/event"
-	"github.com/abahmed/kwatch/internal/filter"
-	"github.com/abahmed/kwatch/internal/k8s"
-	"github.com/abahmed/kwatch/internal/storage"
+	"github.com/pontostroy/kwatch/internal/event"
+	"github.com/pontostroy/kwatch/internal/filter"
+	"github.com/pontostroy/kwatch/internal/k8s"
+	"github.com/pontostroy/kwatch/internal/storage"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/klog/v2"
 )

@@ -1,10 +1,10 @@
 package handler
 
 import (
-	"github.com/abahmed/kwatch/internal/event"
-	"github.com/abahmed/kwatch/internal/filter"
-	"github.com/abahmed/kwatch/internal/k8s"
-	"github.com/abahmed/kwatch/internal/storage"
+	"github.com/pontostroy/kwatch/internal/event"
+	"github.com/pontostroy/kwatch/internal/filter"
+	"github.com/pontostroy/kwatch/internal/k8s"
+	"github.com/pontostroy/kwatch/internal/storage"
 	"k8s.io/klog/v2"
 )
 

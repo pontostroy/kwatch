@@ -33,6 +33,8 @@ data:
         port: <port_number>
       teams:
           webhook: <webhook_url>
+      teams_workflow:
+          webhook: <workflow_webhook_url>
       rocketchat:
           webhook: <webhook_url>
       mattermost:

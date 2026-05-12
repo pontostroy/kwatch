@@ -1,4 +1,4 @@
-module github.com/abahmed/kwatch
+module github.com/pontostroy/kwatch
 
 go 1.26.1
 

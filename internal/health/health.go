@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/abahmed/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/config"
 	"k8s.io/klog/v2"
 )
 

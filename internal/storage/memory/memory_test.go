@@ -4,7 +4,7 @@ import (
 	"sync"
 	"testing"
 
-	storage "github.com/abahmed/kwatch/internal/storage"
+	storage "github.com/pontostroy/kwatch/internal/storage"
 )
 
 func TestMemory(t *testing.T) {

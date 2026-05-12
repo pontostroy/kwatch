@@ -3,7 +3,7 @@ package pvc
 import (
 	"encoding/json"
 
-	"github.com/abahmed/kwatch/internal/k8s"
+	"github.com/pontostroy/kwatch/internal/k8s"
 	"k8s.io/klog/v2"
 )
 

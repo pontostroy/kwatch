@@ -4,23 +4,24 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/abahmed/kwatch/internal/alert/dingtalk"
-	"github.com/abahmed/kwatch/internal/alert/discord"
-	"github.com/abahmed/kwatch/internal/alert/email"
-	"github.com/abahmed/kwatch/internal/alert/feishu"
-	"github.com/abahmed/kwatch/internal/alert/googlechat"
-	"github.com/abahmed/kwatch/internal/alert/matrix"
-	"github.com/abahmed/kwatch/internal/alert/mattermost"
-	"github.com/abahmed/kwatch/internal/alert/opsgenie"
-	"github.com/abahmed/kwatch/internal/alert/pagerduty"
-	"github.com/abahmed/kwatch/internal/alert/rocketchat"
-	"github.com/abahmed/kwatch/internal/alert/slack"
-	"github.com/abahmed/kwatch/internal/alert/teams"
-	"github.com/abahmed/kwatch/internal/alert/telegram"
-	"github.com/abahmed/kwatch/internal/alert/webhook"
-	"github.com/abahmed/kwatch/internal/alert/zenduty"
-	"github.com/abahmed/kwatch/internal/config"
-	"github.com/abahmed/kwatch/internal/event"
+	"github.com/pontostroy/kwatch/internal/alert/dingtalk"
+	"github.com/pontostroy/kwatch/internal/alert/discord"
+	"github.com/pontostroy/kwatch/internal/alert/email"
+	"github.com/pontostroy/kwatch/internal/alert/feishu"
+	"github.com/pontostroy/kwatch/internal/alert/googlechat"
+	"github.com/pontostroy/kwatch/internal/alert/matrix"
+	"github.com/pontostroy/kwatch/internal/alert/mattermost"
+	"github.com/pontostroy/kwatch/internal/alert/opsgenie"
+	"github.com/pontostroy/kwatch/internal/alert/pagerduty"
+	"github.com/pontostroy/kwatch/internal/alert/rocketchat"
+	"github.com/pontostroy/kwatch/internal/alert/slack"
+	"github.com/pontostroy/kwatch/internal/alert/teams"
+	"github.com/pontostroy/kwatch/internal/alert/teamsworkflow"
+	"github.com/pontostroy/kwatch/internal/alert/telegram"
+	"github.com/pontostroy/kwatch/internal/alert/webhook"
+	"github.com/pontostroy/kwatch/internal/alert/zenduty"
+	"github.com/pontostroy/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/event"
 	"k8s.io/klog/v2"
 )
 
@@ -53,6 +54,8 @@ func (a *AlertManager) Init(
 			pvdr = telegram.NewTelegram(v, appCfg)
 		} else if lowerCaseKey == "teams" {
 			pvdr = teams.NewTeams(v, appCfg)
+		} else if lowerCaseKey == "teamsworkflow" || lowerCaseKey == "teams_workflow" {
+			pvdr = teamsworkflow.NewTeamsWorkflow(v, appCfg)
 		} else if lowerCaseKey == "email" {
 			pvdr = email.NewEmail(v, appCfg)
 		} else if lowerCaseKey == "rocketchat" {

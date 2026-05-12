@@ -3,7 +3,7 @@ package memory
 import (
 	"sync"
 
-	storage "github.com/abahmed/kwatch/internal/storage"
+	storage "github.com/pontostroy/kwatch/internal/storage"
 )
 
 type memory struct {

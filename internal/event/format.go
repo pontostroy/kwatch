@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/abahmed/kwatch/internal/constant"
+	"github.com/pontostroy/kwatch/internal/constant"
 )
 
 func (e *Event) FormatMarkdown(clusterName, text, delimiter string) string {
