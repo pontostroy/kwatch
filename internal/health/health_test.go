@@ -7,7 +7,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/abahmed/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/config"
 	"github.com/stretchr/testify/assert"
 )
 

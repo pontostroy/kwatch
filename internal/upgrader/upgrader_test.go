@@ -5,10 +5,10 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/abahmed/kwatch/internal/alert"
-	"github.com/abahmed/kwatch/internal/config"
-	"github.com/abahmed/kwatch/internal/state"
-	"github.com/abahmed/kwatch/internal/version"
+	"github.com/pontostroy/kwatch/internal/alert"
+	"github.com/pontostroy/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/state"
+	"github.com/pontostroy/kwatch/internal/version"
 	"github.com/google/go-github/v41/github"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
@@ -217,7 +217,7 @@ func TestUpgraderGetNotifiedVersion(t *testing.T) {
 
 func TestCheckReleaseGitHubError(t *testing.T) {
 	mockGithub := new(MockGitHubClient)
-	mockGithub.On("GetLatestRelease", mock.Anything, "abahmed", "kwatch").
+	mockGithub.On("GetLatestRelease", mock.Anything, "pontostroy", "kwatch").
 		Return(nil, nil, errors.New("rate limit exceeded"))
 
 	u := NewUpgrader(&config.Upgrader{}, &alert.AlertManager{}, nil)
@@ -230,7 +230,7 @@ func TestCheckReleaseGitHubError(t *testing.T) {
 
 func TestCheckReleaseNilTagName(t *testing.T) {
 	mockGithub := new(MockGitHubClient)
-	mockGithub.On("GetLatestRelease", mock.Anything, "abahmed", "kwatch").
+	mockGithub.On("GetLatestRelease", mock.Anything, "pontostroy", "kwatch").
 		Return(&github.RepositoryRelease{}, nil, nil)
 
 	u := NewUpgrader(&config.Upgrader{}, &alert.AlertManager{}, nil)
@@ -244,7 +244,7 @@ func TestCheckReleaseNilTagName(t *testing.T) {
 func TestCheckReleaseSameVersion(t *testing.T) {
 	mockGithub := new(MockGitHubClient)
 	currentVersion := version.Short()
-	mockGithub.On("GetLatestRelease", mock.Anything, "abahmed", "kwatch").
+	mockGithub.On("GetLatestRelease", mock.Anything, "pontostroy", "kwatch").
 		Return(&github.RepositoryRelease{TagName: &currentVersion}, nil, nil)
 
 	u := NewUpgrader(&config.Upgrader{}, &alert.AlertManager{}, nil)
@@ -258,7 +258,7 @@ func TestCheckReleaseSameVersion(t *testing.T) {
 func TestCheckReleaseAlreadyNotified(t *testing.T) {
 	newVersion := "v99.0.0"
 	mockGithub := new(MockGitHubClient)
-	mockGithub.On("GetLatestRelease", mock.Anything, "abahmed", "kwatch").
+	mockGithub.On("GetLatestRelease", mock.Anything, "pontostroy", "kwatch").
 		Return(&github.RepositoryRelease{TagName: &newVersion}, nil, nil)
 
 	client := fake.NewSimpleClientset()
@@ -287,7 +287,7 @@ func TestCheckReleaseAlreadyNotified(t *testing.T) {
 func TestCheckReleaseNewVersionNotifies(t *testing.T) {
 	newVersion := "v99.0.0"
 	mockGithub := new(MockGitHubClient)
-	mockGithub.On("GetLatestRelease", mock.Anything, "abahmed", "kwatch").
+	mockGithub.On("GetLatestRelease", mock.Anything, "pontostroy", "kwatch").
 		Return(&github.RepositoryRelease{TagName: &newVersion}, nil, nil)
 
 	mockAlert := new(MockAlertManager)
@@ -309,7 +309,7 @@ func TestCheckReleaseNewVersionNotifies(t *testing.T) {
 func TestCheckReleaseNewVersionSetsState(t *testing.T) {
 	newVersion := "v99.0.0"
 	mockGithub := new(MockGitHubClient)
-	mockGithub.On("GetLatestRelease", mock.Anything, "abahmed", "kwatch").
+	mockGithub.On("GetLatestRelease", mock.Anything, "pontostroy", "kwatch").
 		Return(&github.RepositoryRelease{TagName: &newVersion}, nil, nil)
 
 	mockAlert := new(MockAlertManager)

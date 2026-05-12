@@ -3,8 +3,8 @@ package handler
 import (
 	"fmt"
 
-	"github.com/abahmed/kwatch/internal/filter"
-	"github.com/abahmed/kwatch/internal/k8s"
+	"github.com/pontostroy/kwatch/internal/filter"
+	"github.com/pontostroy/kwatch/internal/k8s"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/client-go/tools/cache"

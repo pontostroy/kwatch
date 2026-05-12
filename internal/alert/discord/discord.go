@@ -3,9 +3,9 @@ package discord
 import (
 	"strings"
 
-	"github.com/abahmed/kwatch/internal/config"
-	"github.com/abahmed/kwatch/internal/constant"
-	"github.com/abahmed/kwatch/internal/event"
+	"github.com/pontostroy/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/constant"
+	"github.com/pontostroy/kwatch/internal/event"
 
 	discordgo "github.com/bwmarrin/discordgo"
 	"k8s.io/klog/v2"

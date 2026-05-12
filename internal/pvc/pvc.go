@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/abahmed/kwatch/internal/alert"
-	"github.com/abahmed/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/alert"
+	"github.com/pontostroy/kwatch/internal/config"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/klog/v2"
 )

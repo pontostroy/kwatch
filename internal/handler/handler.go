@@ -1,10 +1,10 @@
 package handler
 
 import (
-	"github.com/abahmed/kwatch/internal/alert"
-	"github.com/abahmed/kwatch/internal/config"
-	"github.com/abahmed/kwatch/internal/filter"
-	"github.com/abahmed/kwatch/internal/storage"
+	"github.com/pontostroy/kwatch/internal/alert"
+	"github.com/pontostroy/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/filter"
+	"github.com/pontostroy/kwatch/internal/storage"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/kubernetes"
 	corev1lister "k8s.io/client-go/listers/core/v1"

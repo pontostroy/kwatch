@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/abahmed/kwatch/internal/alert"
-	"github.com/abahmed/kwatch/internal/config"
-	"github.com/abahmed/kwatch/internal/constant"
-	"github.com/abahmed/kwatch/internal/state"
-	"github.com/abahmed/kwatch/internal/version"
+	"github.com/pontostroy/kwatch/internal/alert"
+	"github.com/pontostroy/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/constant"
+	"github.com/pontostroy/kwatch/internal/state"
+	"github.com/pontostroy/kwatch/internal/version"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/klog/v2"
 )

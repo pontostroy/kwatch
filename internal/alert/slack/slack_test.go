@@ -3,8 +3,8 @@ package slack
 import (
 	"testing"
 
-	"github.com/abahmed/kwatch/internal/config"
-	"github.com/abahmed/kwatch/internal/event"
+	"github.com/pontostroy/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/event"
 	slackClient "github.com/slack-go/slack"
 	"github.com/stretchr/testify/assert"
 )

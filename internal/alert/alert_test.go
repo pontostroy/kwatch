@@ -4,8 +4,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/abahmed/kwatch/internal/config"
-	"github.com/abahmed/kwatch/internal/event"
+	"github.com/pontostroy/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/event"
 	"github.com/stretchr/testify/assert"
 )
 

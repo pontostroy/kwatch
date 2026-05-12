@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/abahmed/kwatch/internal/config"
-	"github.com/abahmed/kwatch/internal/event"
+	"github.com/pontostroy/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/event"
 	"k8s.io/klog/v2"
 )
 

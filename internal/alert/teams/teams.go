@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/abahmed/kwatch/internal/config"
-	"github.com/abahmed/kwatch/internal/event"
-	"github.com/abahmed/kwatch/internal/k8s"
+	"github.com/pontostroy/kwatch/internal/config"
+	"github.com/pontostroy/kwatch/internal/event"
+	"github.com/pontostroy/kwatch/internal/k8s"
 	"k8s.io/klog/v2"
 )
 
